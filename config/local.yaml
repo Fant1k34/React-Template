@@ -1,0 +1,5 @@
+protocol: http
+serverName: localhost
+port: 3000
+pagesUrl: /
+bundleUrl: /bundle.js
