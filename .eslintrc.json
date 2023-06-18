@@ -1,0 +1,58 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": ["@typescript-eslint", "react", "react-hooks", "filenames"],
+    "rules": {
+        "@typescript-eslint/naming-convention": [
+            2,
+            {
+                "selector": "default",
+                "format": ["camelCase"],
+                "leadingUnderscore": "allow",
+                "trailingUnderscore": "allow"
+            },
+            {
+                "selector": "variable",
+                "format": ["camelCase", "PascalCase"],
+                "leadingUnderscore": "allow",
+                "trailingUnderscore": "allow"
+            },
+            {
+                "selector": "typeLike",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "property",
+                "format": ["camelCase"]
+            },
+            {
+                "selector": "enumMember",
+                "format": ["PascalCase", "UPPER_CASE"]
+            }
+        ],
+        "filenames/match-regex": ["error", "^[a-z]+(-[a-z]+)*$", true],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "arrow-parens": ["error", "always"],
+        "no-unused-vars": "error",
+        "no-console": "warn",
+        "semi": ["warn", "always"],
+        "no-unused-expressions": "warn",
+        "no-param-reassign": "warn",
+        "prefer-const": "error",
+        "no-var": "error",
+        "no-const-assign": "warn",
+        "no-useless-concat": "error",
+        "prefer-template": "error",
+        "no-underscore-dangle": "error"
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}

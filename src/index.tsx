@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from "react-dom/client";
-import { TextWithButton } from "./components/text-with-button/text-with-button";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { TextWithButton } from './components/text-with-button'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<>
-    <TextWithButton />
-</>);
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+    <>
+        <TextWithButton />
+    </>
+)
